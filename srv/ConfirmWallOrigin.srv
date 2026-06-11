@@ -1,0 +1,11 @@
+# Freeze the (interactively set) wall origin and bake it into the named plan.
+# The origin is given in the world frame; only x, y and yaw are used for the
+# wall pose, z is taken as the ground reference for the bottom course.
+string wall_plan_name
+geometry_msgs/Pose origin
+bool persist          # if true, write the resolved per-block plan back to disk
+---
+bool success
+bool valid            # all resolved blocks passed reach/collision validation
+uint32 num_blocks
+string message
