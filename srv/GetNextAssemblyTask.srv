@@ -9,4 +9,8 @@ string reference_block_id
 geometry_msgs/PoseStamped pickup_pose
 geometry_msgs/PoseStamped target_pose
 geometry_msgs/PoseStamped reference_pose
+# Pre-place pose: above the target and offset laterally along the wall build
+# direction (away from the already-placed neighbour), so descending from here to
+# target_pose gives an angled approach with clearance.
+geometry_msgs/PoseStamped approach_pose
 string message
