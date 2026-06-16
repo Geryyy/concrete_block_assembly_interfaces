@@ -7,6 +7,8 @@ string task_id
 string target_block_id
 string reference_block_id
 geometry_msgs/PoseStamped pickup_pose
+# Pre-pick pose: straight above the pickup by the configured approach height.
+geometry_msgs/PoseStamped pickup_approach_pose
 geometry_msgs/PoseStamped target_pose
 geometry_msgs/PoseStamped reference_pose
 # Pre-place pose: above the target and offset laterally along the wall build
