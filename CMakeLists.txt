@@ -9,6 +9,7 @@ find_package(builtin_interfaces REQUIRED)
 rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/GetNextAssemblyTask.srv"
   "srv/ConfirmWallOrigin.srv"
+  "srv/PlanControl.srv"
   DEPENDENCIES geometry_msgs builtin_interfaces
 )
 

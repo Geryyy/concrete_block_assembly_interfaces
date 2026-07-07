@@ -1,0 +1,15 @@
+# Control the active wall-assembly plan in the world model.
+#
+# command:
+#   "list"     - return the available plan names (wall_plan_name ignored)
+#   "activate" - clear existing goals and publish wall_plan_name's goals to the
+#                world model (forces a fresh publish even if already active)
+#   "clear"    - clear all assembly goals from the world model
+string command
+string wall_plan_name
+---
+bool success
+string[] plan_names   # populated for "list"
+string active_plan     # currently activated plan ("" if none)
+uint32 num_goals       # goals published ("activate") or cleared ("clear")
+string message
