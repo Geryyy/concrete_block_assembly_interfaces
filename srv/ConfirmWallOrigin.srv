@@ -1,6 +1,10 @@
 # Freeze the (interactively set) wall origin and bake it into the named plan.
-# The origin is given in the world frame; only x, y and yaw are used for the
-# wall pose, z is taken as the ground reference for the bottom course.
+# The origin is given in the world frame; only x and y and yaw are used for
+# the wall pose. z is the ground reference for the bottom course, but this
+# request's z is only a fallback: wall_setup_node queries the detector's
+# local ground-plane fit (DiscoverBlocks.ground_height_m) and, if that
+# succeeds, overwrites z with the measured value before freezing -- the z
+# given here is used as-is only when that query is unavailable.
 string wall_plan_name
 geometry_msgs/Pose origin
 bool persist          # if true, write the resolved per-block plan back to disk
